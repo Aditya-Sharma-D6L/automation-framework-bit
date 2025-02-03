@@ -46,7 +46,7 @@ public class Captcha {
                 // Perform sliding action
                 Actions actions = new Actions(this.driver);
                 actions.clickAndHold(slider)
-                        .moveByOffset(205, 0) // Adjust this dynamically
+                        .moveByOffset(202, 0) // Adjust this dynamically
                         .release()
                         .perform();
 

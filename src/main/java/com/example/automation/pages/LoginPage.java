@@ -45,6 +45,11 @@ public class LoginPage extends BasePage {
     private static final By unHidePassword               = By.xpath("//div[@class='chakra-input__right-element css-1lds0jh']//div[@class='css-0']//*[name()='svg']");
     private static final By next_button_on_login_page    = By.xpath("//button[@type='submit' and text()='NEXT']");
     private static final By incorrect_password_message   = By.xpath("//p[contains(text(), 'Please enter correct credentials')]");
+    private static final By is_login_successful          = By.xpath("//div/p[text()='Wallet'] | " +
+                                                            "//h2[text()='Individual Questionnaire'] | " +
+                                                            "//h1[text()='Please provide the information'] | " +
+                                                            "//p[text()='Complete identity verification to unlock all features. ']");
+
 
     /**
      * Clicks the login button in header
@@ -149,5 +154,34 @@ public class LoginPage extends BasePage {
     public void submitLoginForm() {
         WebElement nextButton = waitUtils.waitForPresenceLong(next_button_on_login_page);
         nextButton.click();
+    }
+
+    /**
+     * Checks if login process is successful
+     * @return Boolean based on the visibility of the element in the page
+     */
+    public boolean isLoginSuccessful() {
+        return waitUtils.waitForVisibilityLong(is_login_successful).isDisplayed();
+    }
+
+    /**
+     * Handles OTP/2FA page and enters the respective code
+     */
+    public void enterOtpOr2Fa() {
+        handleOtp_2fa.handleOtp();
+    }
+
+    /**
+     * Performs the login process with valid credentials
+     * @param email
+     * @param password
+     */
+    public void login(String email, String password) {
+        enterEmail(email);
+        clickLoginButton();
+        enterPassword(password);
+        showPassword();
+        submitLoginForm();
+        solveCaptcha();
     }
 }

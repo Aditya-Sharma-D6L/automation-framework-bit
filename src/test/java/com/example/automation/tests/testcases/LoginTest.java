@@ -5,6 +5,8 @@ import com.example.automation.config.ApplicationProperties;
 import com.example.automation.config.Config;
 import com.example.automation.drivers.DriverManager;
 import com.example.automation.pages.LoginPage;
+import com.example.automation.tests.testdata.UserCredentials;
+import com.example.automation.tests.utilities.EnvironmentUtils;
 import com.example.automation.utilities.*;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
@@ -76,7 +78,7 @@ public class LoginTest extends AbstractTestNGSpringContextTests {
     @Test(priority = 1, description = "Verify login with invalid email")
     public void testLoginWithInvalidEmail() throws Exception {
         initializeDriverAndLoginPage("Verify login with invalid email", "Login form should not go to password page");
-        test.info("Test for signup with empty form");
+        test.info("Test for login with empty form");
 
         try {
             String email = "abcd.com";
@@ -97,7 +99,7 @@ public class LoginTest extends AbstractTestNGSpringContextTests {
     @Test(priority = 2, description = "Verify login with empty email")
     public void testLoginWithEmptyEmail() throws Exception {
         initializeDriverAndLoginPage("Verify login with empty email", "Login form should not go to password page");
-        test.info("Test for signup with empty form");
+        test.info("Test for login with empty form");
 
         try {
             String email = "";
@@ -123,7 +125,7 @@ public class LoginTest extends AbstractTestNGSpringContextTests {
     public void testLoginWithNonExistingEmail() throws Exception {
         initializeDriverAndLoginPage("Verify login with non-existing user", "Login form should not go to password page");
 
-        test.info("Test for signup with non-existing email");
+        test.info("Test for login with non-existing email");
 
         try {
             String email = generateEmail.generateEmail();
@@ -149,19 +151,13 @@ public class LoginTest extends AbstractTestNGSpringContextTests {
     public void testLoginWithInvalidPassword() throws Exception {
         initializeDriverAndLoginPage("Verify login with valid email but invalid password", "Login form should not submit");
 
-        test.info("Test for signup with invalid password");
+        test.info("Test for login with invalid password");
 
         try {
-            String email = getExistingEmailForEnvironment();
+            String email = EnvironmentUtils.getEmailForEnvironment();
             String password = "Pass@123456789";
 
-            loginPage.enterEmail(email);
-            loginPage.clickLoginButton();
-
-            loginPage.enterPassword(password);
-            loginPage.showPassword();
-            loginPage.submitLoginForm();
-            loginPage.solveCaptcha();
+            loginPage.login(email, password);
 
             Assert.assertTrue(loginPage.getInvalidPasswordErrorMessage().contains("Please enter correct credentials, you have"), "Please enter correct credentials, you have");
             test.pass("Empty email validation passed");
@@ -173,21 +169,32 @@ public class LoginTest extends AbstractTestNGSpringContextTests {
         }
     }
 
-    `
+    @Test(priority = 5,
+            description = "Verify login with correct email and password",
+            dataProviderClass = UserCredentials.class,
+            dataProvider = "userCredentials")
+    public void testLogin(String env, String email, String password) throws Exception {
+        initializeDriverAndLoginPage("Verify login with valid email and password", "Login form should submit");
+
+        test.info("Test for login with valid email and password");
+
+        try {
+            loginPage.login(email, password);
+            loginPage.enterOtpOr2Fa();
+
+            Assert.assertTrue(loginPage.isLoginSuccessful(), "Login Failed. Something went wrong");
+            test.pass("Login successful");
+
+        } catch (Exception e) {
+            test.fail("Test failed due to an exception: " + e.getMessage());
+            ScreenshotUtil.captureScreenshot(driver, test, getMethodName());
+            throw e;
+        }
+    }
 
 
     private String getMethodName() {
         return Thread.currentThread().getStackTrace()[2].getMethodName();
-    }
-
-    private String getExistingEmailForEnvironment() {
-        String env = Config.getEnvironment();
-        return switch (env) {
-            case "qa" -> "copt1@yopmail.com";
-            case "staging", "eks" -> "mtaditya2@yopmail.com";
-            case "prod" -> "aditya.sharma@delta6labs.com";
-            default -> throw new IllegalArgumentException("Unsupported environment: " + env);
-        };
     }
 
     @AfterClass

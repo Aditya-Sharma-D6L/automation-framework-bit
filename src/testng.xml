@@ -40,24 +40,23 @@
 
     <test name="All Tests">
         <classes>
-<!--            <class name="com.example.automation.tests.testcases.SignUpTest" />-->
+            <class name="com.example.automation.tests.testcases.SignUpTest" />
 
-<!--            <class name="com.example.automation.tests.testcases.LoginTest" />-->
+            <class name="com.example.automation.tests.testcases.LoginTest" />
 
-                                <!--   Sign Up Tests    -->
-<!--            <class name="com.example.automation.tests.testcases.SignUpTest">-->
+<!--                                   Sign Up Tests    -->
+<!--            <class name="com.example.automation.tests.testcases.SignUpTest" >-->
 <!--                <methods>-->
-<!--                    <include name="testSignUpWithCorporateUser"/>-->
 <!--                    <include name="testSignUpWithCorporateUserWithDifferentCountry"/>-->
 <!--                </methods>-->
 <!--            </class>-->
 
                                 <!--   Login Tests    -->
-            <class name="com.example.automation.tests.testcases.LoginTest">
-                <methods>
-                    <include name="testLoginWithInvalidPassword"/>
-                </methods>
-            </class>
+<!--            <class name="com.example.automation.tests.testcases.LoginTest">-->
+<!--                <methods>-->
+<!--                    <include name="testLoginWithInvalidPassword"/>-->
+<!--                </methods>-->
+<!--            </class>-->
         </classes>
     </test>
 </suite>

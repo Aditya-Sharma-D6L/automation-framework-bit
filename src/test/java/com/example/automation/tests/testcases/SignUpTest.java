@@ -6,6 +6,7 @@ import com.example.automation.config.Config;
 import com.example.automation.drivers.DriverManager;
 import com.example.automation.pages.SignupPage;
 import com.example.automation.tests.testdata.PasswordValidationData;
+import com.example.automation.tests.utilities.EnvironmentUtils;
 import com.example.automation.utilities.*;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
@@ -117,7 +118,7 @@ public class SignUpTest extends AbstractTestNGSpringContextTests {
         initializeDriverAndSignupPage("Sign-Up with Existing Email", "Test for existing email validation");
 
         try {
-            String existingEmail = getExistingEmailForEnvironment();
+            String existingEmail = EnvironmentUtils.getEmailForEnvironment();
             String password = "Pass@12345";
 
             signupPage.enterEmail(existingEmail).enterPassword(password);
@@ -145,12 +146,7 @@ public class SignUpTest extends AbstractTestNGSpringContextTests {
             String password = "Pass@12345";
             test.info("Generated email: " + dynamicEmail);
 
-            signupPage.enterEmail(dynamicEmail).enterPassword(password);
-            signupPage.clickSignUpButton(dynamicEmail, password);
-
-            // Post signup steps
-            signupPage.acceptTnc();
-            signupPage.solveCaptcha();
+            signupPage.signUp(dynamicEmail, password);
             signupPage.enterOtpOr2Fa();
 
             Assert.assertTrue(signupPage.isSignUpSuccessful(), "Registration not successful");
@@ -174,15 +170,7 @@ public class SignUpTest extends AbstractTestNGSpringContextTests {
 
         Thread.sleep(1000);
         signupPage.selectCountry(country);
-        signupPage.enterEmail(email)
-                .enterPassword(password)
-                .clickSignUpButton(email, password);
-
-        // Handle Terms and Conditions Modal
-        signupPage.acceptTnc();
-
-        // Solve captcha
-        signupPage.solveCaptcha();
+        signupPage.signUp(email, password);
 
         // Verify OTP/2FA
         signupPage.enterOtpOr2Fa();
@@ -201,7 +189,7 @@ public class SignUpTest extends AbstractTestNGSpringContextTests {
         initializeDriverAndSignupPage("Signup using referral code", "Test signup using a referral code");
 
         // Fill out the signup form and submit
-        String referralCode = "pp1uhr_R";
+        String referralCode = "r5fya3_R";
         String email = generateEmail.generateEmail();
         String password = "Pass@12345";
         log.info("Using referral code for signup: {}", referralCode);
@@ -212,14 +200,8 @@ public class SignUpTest extends AbstractTestNGSpringContextTests {
                 .expandReferralCodeField()
                 .enterReferralCode(referralCode)
                 .clickSignUpButton(email, password);
-
-        // Handle Terms and Conditions Modal
         signupPage.acceptTnc();
-
-        // Solve captcha
         signupPage.solveCaptcha();
-
-        // Verify OTP/2FA
         signupPage.enterOtpOr2Fa();
 
         // Verify if signup is successful
@@ -260,13 +242,8 @@ public class SignUpTest extends AbstractTestNGSpringContextTests {
             String email = generateEmail.generateEmail();
             String password = "Pass@12345";
 
-            signupPage.selectCorporateUser();
-            signupPage.enterEmail(email)
-                    .enterPassword(password)
-                    .clickSignUpButton(email, password);
+            signupPage.corpSignUp(email, password);
 
-            signupPage.acceptTnc();
-            signupPage.solveCaptcha();
             signupPage.enterOtpOr2Fa();
             signupPage.isSignUpSuccessful();
 
@@ -287,31 +264,17 @@ public class SignUpTest extends AbstractTestNGSpringContextTests {
             String country = "Germany";
 
             signupPage.selectCountry(country);
-            signupPage.selectCorporateUser();
-            signupPage.enterEmail(email)
-                    .enterPassword(password)
-                    .clickSignUpButton(email, password);
-
-            signupPage.acceptTnc();
-            signupPage.solveCaptcha();
+            signupPage.corpSignUp(email, password);
             signupPage.enterOtpOr2Fa();
-            signupPage.isSignUpSuccessful();
+
+            Assert.assertTrue(signupPage.isSignUpSuccessful(), "Registration failed, something went wrong");
+            log.info("Signup Test With Valid Credentials Completed Successfully.");
 
         } catch (Exception e) {
             test.fail("Test failed due to an exception: " + e.getMessage());
             ScreenshotUtil.captureScreenshot(driver, test, getMethodName());
             throw e;
         }
-    }
-
-    private String getExistingEmailForEnvironment() {
-        String env = Config.getEnvironment();
-        return switch (env) {
-            case "qa" -> "copt1@yopmail.com";
-            case "staging", "eks" -> "mtaditya1@yopmail.com";
-            case "prod" -> "aditya.sharma@delta6labs.com";
-            default -> throw new IllegalArgumentException("Unsupported environment: " + env);
-        };
     }
 
     private String getMethodName() {

@@ -61,20 +61,20 @@ public class HandleOtpOR2faVerification {
     /**
      * Handles OTP/2FA Verification.
      */
-    public void handleOtp() throws InterruptedException {
+    public void handleOtp() {
         try {
             // Use longWait for visibility checks since the page load may take time
             try {
                 if (isOtpPageDisplayed()) {
                     log.info("On OTP page");
                 }
-            } catch (TimeoutException ignored) {
+            } catch (Exception e) {
                 // OTP page not found, try checking for 2FA
                 try {
                     if (is2FaPageDisplayed()) {
                         log.info("On 2FA page");
                     }
-                } catch (TimeoutException ignoredAgain) {
+                } catch (Exception ex) {
                     log.warn("Neither OTP page nor 2FA page found.");
                     return; // Exit method if neither page is found
                 }
@@ -113,7 +113,7 @@ public class HandleOtpOR2faVerification {
     private boolean isOtpVerifiedSuccessfully() throws InterruptedException {
         try {
             // Use shortWait for quick validation
-            WebElement successIndicator = waitUtils.waitForVisibilityShort(is_signup_successful);
+            WebElement successIndicator = waitUtils.waitForVisibilityLong(is_signup_successful);
 
             Retry.retryOperation(() -> {
                 boolean flag = successIndicator.isDisplayed();
@@ -129,7 +129,7 @@ public class HandleOtpOR2faVerification {
                     log.error("Error: OTP verification failed");
                     return false;
                 }
-            } catch (TimeoutException ignored) {
+            } catch (RuntimeException e1) {
                 // No error message found
             }
         }

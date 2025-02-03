@@ -40,8 +40,8 @@ public class SignupPage extends BasePage {
     private static final By is_email_or_password_not_entered_error_displayed     = By.xpath("//div[text()='Please enter your Email!']");
     private static final By email_is_not_valid           = By.xpath("//*[text()='Email is not valid!']");
     private static final By validatePasswordErrorMessage = By.xpath("//*[text()='Password is not valid!'] | "+
-                                                            "//*[text()='Password must be more than 10 characters'] | " +
-                                                             "//*[text()='Password must be less than 16 characters']");
+            "//*[text()='Password must be more than 10 characters'] | " +
+            "//*[text()='Password must be less than 16 characters']");
     private static final By unHidePassword               = By.xpath("//div[@class='chakra-input__right-element css-wydlee']//span//*[name()='svg']");
     private static final By select_corporate_user_tab    = By.xpath("//div[text()='Corporate']");
 
@@ -266,43 +266,32 @@ public class SignupPage extends BasePage {
         return handleOtp_2fa.isOtpOr2FaPageDisplayed();
     }
 
-    public void signUp(String dynamicEmail, String password) throws Exception {
-
-        String baseUrl = appProps.getBaseUrl();
-        driver.get(baseUrl);
-        log.info("Navigating to Signup Page: {}", baseUrl + "/register");
-
-        // Accept platform TnC if displayed
-        acceptTnc();
-
-        goToSignupPage();
-
-        // Step 2: Fill out the signup form and submit
-        log.info("Using dynamic email for signup: {}", dynamicEmail);
-
-        enterEmail(dynamicEmail);
+    /**
+     * Performs the signup process for individual user with valid credentials
+     * @param email
+     * @param password
+     */
+    public void signUp(String email, String password) throws Exception {
+        enterEmail(email);
         enterPassword(password);
-        Thread.sleep(1000);
-        clickSignUpButton(dynamicEmail, password);
-
-        // Step 3: Post Signup Validation
-        String expectedUrl = baseUrl + "/register";
-        log.info("Validating redirection to: {}", expectedUrl);
-
-        // Step 4: Handle Terms and Conditions Modal
+        showPassword();
+        clickSignUpButton(email, password);
         acceptTnc();
-
-        // Step 5: Solve captcha
         solveCaptcha();
+    }
 
-        // Step 6: Verify OTP/2FA
-        enterOtpOr2Fa();
-
-        // Step 7: Verify if signup is successful
-        if(isSignUpSuccessful()) {
-            log.info("Registration successful");
-        }
-
-        log.info("Signup Test With Valid Credentials Completed Successfully.");
+    /**
+     * Performs the signup process for corporate user with valid credentials
+     * @param email
+     * @param password
+     */
+    public void corpSignUp(String email, String password) throws Exception {
+        selectCorporateUser();
+        enterEmail(email);
+        enterPassword(password);
+        showPassword();
+        clickSignUpButton(email, password);
+        acceptTnc();
+        solveCaptcha();
     }
 }

@@ -8,7 +8,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 
 @Slf4j
 @Component
@@ -25,7 +24,7 @@ public class TestHooks {
         log.info("Current Environment: {}", Config.getEnvironment());
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
         log.info("Quitting WebDriver after the test...");
         driverManager.quitDriver();
