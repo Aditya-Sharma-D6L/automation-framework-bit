@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Automation Test Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Feb 3, 2025 03:38:25 pm</span></a>
+<a href="#"><span class="badge badge-primary">Feb 6, 2025 09:59:17 am</span></a>
 </li>
 </ul>
 </div>
@@ -66,7 +66,6 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
@@ -75,1323 +74,14 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Verify Beans</p>
+            <p class="name">Verify Home Page Footer Links</p>
             <p class="text-sm">
-              <span>3:38:25 pm</span> / <span>00:00:00:001</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Verify Beans</h5>
-<span class='badge badge-success'>02.03.2025 3:38:25 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:38:25 pm</span>
-<span class='badge badge-default'>00:00:00:001</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Verify application beans are loaded for SignUpTest</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:38:25 pm</td>
-        <td>
-          Beans are loaded successfully
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="2"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Verify signup with empty form</p>
-            <p class="text-sm">
-              <span>3:38:26 pm</span> / <span>00:00:29:313</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Verify signup with empty form</h5>
-<span class='badge badge-success'>02.03.2025 3:38:26 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:38:56 pm</span>
-<span class='badge badge-default'>00:00:29:313</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Sign-Up form should not submit with empty form</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:38:29 pm</td>
-        <td>
-          Navigating to Signup Page: https://qa.bitdelta.com/en/register
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:38:39 pm</td>
-        <td>
-          Accepted TnC
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:38:45 pm</td>
-        <td>
-          Navigated to the signup page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:38:45 pm</td>
-        <td>
-          Test for signup with empty form
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:38:56 pm</td>
-        <td>
-          Test failed due to an exception: Element not visible: By.xpath: //h2[text()='Verify OTP'] | //h2[text()='Two Factor Verification'] | //label/span/p[text()='I agree to the BitDelta Terms and conditions']
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="3"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Sign-Up with Invalid Email</p>
-            <p class="text-sm">
-              <span>3:38:57 pm</span> / <span>00:00:22:429</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Sign-Up with Invalid Email</h5>
-<span class='badge badge-success'>02.03.2025 3:38:57 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:39:19 pm</span>
-<span class='badge badge-default'>00:00:22:429</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Test for invalid email format validation</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:38:58 pm</td>
-        <td>
-          Navigating to Signup Page: https://qa.bitdelta.com/en/register
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:39:08 pm</td>
-        <td>
-          Accepted TnC
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:39:14 pm</td>
-        <td>
-          Navigated to the signup page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:39:19 pm</td>
-        <td>
-          Invalid email validation passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="4"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Sign-Up with Existing Email</p>
-            <p class="text-sm">
-              <span>3:39:21 pm</span> / <span>00:00:18:510</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Sign-Up with Existing Email</h5>
-<span class='badge badge-success'>02.03.2025 3:39:21 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:39:39 pm</span>
-<span class='badge badge-default'>00:00:18:510</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Test for existing email validation</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:39:22 pm</td>
-        <td>
-          Navigating to Signup Page: https://qa.bitdelta.com/en/register
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:39:33 pm</td>
-        <td>
-          Accepted TnC
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:39:38 pm</td>
-        <td>
-          Navigated to the signup page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:39:39 pm</td>
-        <td>
-          Sign-up with existing email verified successfully
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="5"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Sign-Up with Valid Email and Password</p>
-            <p class="text-sm">
-              <span>3:39:40 pm</span> / <span>00:01:13:750</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Sign-Up with Valid Email and Password</h5>
-<span class='badge badge-success'>02.03.2025 3:39:40 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:40:54 pm</span>
-<span class='badge badge-default'>00:01:13:750</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Test for successful sign-up</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:39:42 pm</td>
-        <td>
-          Navigating to Signup Page: https://qa.bitdelta.com/en/register
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:39:52 pm</td>
-        <td>
-          Accepted TnC
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:39:58 pm</td>
-        <td>
-          Navigated to the signup page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:39:58 pm</td>
-        <td>
-          Test for successful sign-up with valid(unique) email and password
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:39:58 pm</td>
-        <td>
-          Generated email: automationqa3958@yopmail.com
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:40:54 pm</td>
-        <td>
-          Sign-up with valid email and password completed successfully
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="6"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Signup with different country other than India</p>
-            <p class="text-sm">
-              <span>3:40:56 pm</span> / <span>00:00:17:255</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Signup with different country other than India</h5>
-<span class='badge badge-success'>02.03.2025 3:40:56 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:41:13 pm</span>
-<span class='badge badge-default'>00:00:17:255</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Test for different country during signup</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:40:57 pm</td>
-        <td>
-          Navigating to Signup Page: https://qa.bitdelta.com/en/register
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:41:07 pm</td>
-        <td>
-          Accepted TnC
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:41:13 pm</td>
-        <td>
-          Navigated to the signup page
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="7"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Signup using referral code</p>
-            <p class="text-sm">
-              <span>3:42:22 pm</span> / <span>00:00:17:372</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Signup using referral code</h5>
-<span class='badge badge-success'>02.03.2025 3:42:22 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:42:39 pm</span>
-<span class='badge badge-default'>00:00:17:372</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Test signup using a referral code</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:42:24 pm</td>
-        <td>
-          Navigating to Signup Page: https://qa.bitdelta.com/en/register
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:42:34 pm</td>
-        <td>
-          Accepted TnC
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:42:39 pm</td>
-        <td>
-          Navigated to the signup page
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="8"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Password Test: Should contain at least one special character</p>
-            <p class="text-sm">
-              <span>3:44:13 pm</span> / <span>00:00:23:524</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Password Test: Should contain at least one special character</h5>
-<span class='badge badge-success'>02.03.2025 3:44:13 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:44:36 pm</span>
-<span class='badge badge-default'>00:00:23:524</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Test various password validation rules</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:44:15 pm</td>
-        <td>
-          Navigating to Signup Page: https://qa.bitdelta.com/en/register
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:44:25 pm</td>
-        <td>
-          Accepted TnC
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:44:30 pm</td>
-        <td>
-          Navigated to the signup page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:44:36 pm</td>
-        <td>
-          Password validation passed for: Pass12345
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="9"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Password Test: Should contain at least one lowercase letter</p>
-            <p class="text-sm">
-              <span>3:44:37 pm</span> / <span>00:00:21:960</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Password Test: Should contain at least one lowercase letter</h5>
-<span class='badge badge-success'>02.03.2025 3:44:37 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:44:59 pm</span>
-<span class='badge badge-default'>00:00:21:960</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Test various password validation rules</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:44:38 pm</td>
-        <td>
-          Navigating to Signup Page: https://qa.bitdelta.com/en/register
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:44:48 pm</td>
-        <td>
-          Accepted TnC
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:44:53 pm</td>
-        <td>
-          Navigated to the signup page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:44:59 pm</td>
-        <td>
-          Password validation passed for: PASS@123
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="10"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Password Test: Should contain at least one uppercase letter</p>
-            <p class="text-sm">
-              <span>3:45:01 pm</span> / <span>00:00:23:747</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Password Test: Should contain at least one uppercase letter</h5>
-<span class='badge badge-success'>02.03.2025 3:45:01 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:45:24 pm</span>
-<span class='badge badge-default'>00:00:23:747</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Test various password validation rules</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:45:02 pm</td>
-        <td>
-          Navigating to Signup Page: https://qa.bitdelta.com/en/register
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:45:13 pm</td>
-        <td>
-          Accepted TnC
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:45:18 pm</td>
-        <td>
-          Navigated to the signup page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:45:24 pm</td>
-        <td>
-          Password validation passed for: pass@123
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="11"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Password Test: Should contain at least one number</p>
-            <p class="text-sm">
-              <span>3:45:25 pm</span> / <span>00:00:24:642</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Password Test: Should contain at least one number</h5>
-<span class='badge badge-success'>02.03.2025 3:45:25 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:45:50 pm</span>
-<span class='badge badge-default'>00:00:24:642</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Test various password validation rules</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:45:28 pm</td>
-        <td>
-          Navigating to Signup Page: https://qa.bitdelta.com/en/register
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:45:38 pm</td>
-        <td>
-          Accepted TnC
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:45:44 pm</td>
-        <td>
-          Navigated to the signup page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:45:50 pm</td>
-        <td>
-          Password validation passed for: Pass@word
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="12"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Password Test: Should not contain any spaces</p>
-            <p class="text-sm">
-              <span>3:45:51 pm</span> / <span>00:00:23:844</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Password Test: Should not contain any spaces</h5>
-<span class='badge badge-success'>02.03.2025 3:45:51 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:46:15 pm</span>
-<span class='badge badge-default'>00:00:23:844</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Test various password validation rules</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:45:53 pm</td>
-        <td>
-          Navigating to Signup Page: https://qa.bitdelta.com/en/register
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:46:04 pm</td>
-        <td>
-          Accepted TnC
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:46:09 pm</td>
-        <td>
-          Navigated to the signup page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:46:15 pm</td>
-        <td>
-          Password validation passed for: Pass 12345@
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="13"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Password Test: Should not contain more than 17 characters</p>
-            <p class="text-sm">
-              <span>3:46:16 pm</span> / <span>00:00:22:996</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Password Test: Should not contain more than 17 characters</h5>
-<span class='badge badge-success'>02.03.2025 3:46:16 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:46:39 pm</span>
-<span class='badge badge-default'>00:00:22:996</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Test various password validation rules</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:46:17 pm</td>
-        <td>
-          Navigating to Signup Page: https://qa.bitdelta.com/en/register
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:46:28 pm</td>
-        <td>
-          Accepted TnC
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:46:33 pm</td>
-        <td>
-          Navigated to the signup page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:46:39 pm</td>
-        <td>
-          Password validation passed for: Pass@123456789012
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="14"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Password Test: Should not accept values with <script></p>
-            <p class="text-sm">
-              <span>3:46:41 pm</span> / <span>00:00:23:847</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Password Test: Should not accept values with <script></h5>
-<span class='badge badge-success'>02.03.2025 3:46:41 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:47:05 pm</span>
-<span class='badge badge-default'>00:00:23:847</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Test various password validation rules</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:46:43 pm</td>
-        <td>
-          Navigating to Signup Page: https://qa.bitdelta.com/en/register
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:46:53 pm</td>
-        <td>
-          Accepted TnC
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:46:59 pm</td>
-        <td>
-          Navigated to the signup page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:47:05 pm</td>
-        <td>
-          Password validation passed for: <script></script>
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="15"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Test signup with corporate user</p>
-            <p class="text-sm">
-              <span>3:47:06 pm</span> / <span>00:00:18:158</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Test signup with corporate user</h5>
-<span class='badge badge-success'>02.03.2025 3:47:06 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:47:24 pm</span>
-<span class='badge badge-default'>00:00:18:158</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Verify corporate user registration</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:47:08 pm</td>
-        <td>
-          Navigating to Signup Page: https://qa.bitdelta.com/en/register
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:47:18 pm</td>
-        <td>
-          Accepted TnC
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:47:24 pm</td>
-        <td>
-          Navigated to the signup page
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="16"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Test signup with corporate user</p>
-            <p class="text-sm">
-              <span>3:47:56 pm</span> / <span>00:02:54:428</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Test signup with corporate user</h5>
-<span class='badge badge-success'>02.03.2025 3:47:56 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:50:51 pm</span>
-<span class='badge badge-default'>00:02:54:428</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Verify corporate user registration</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:47:59 pm</td>
-        <td>
-          Navigating to Signup Page: https://qa.bitdelta.com/en/register
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:48:09 pm</td>
-        <td>
-          Accepted TnC
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:48:15 pm</td>
-        <td>
-          Navigated to the signup page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:50:51 pm</td>
-        <td>
-          Driver quit successfully
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="17"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Verify Beans</p>
-            <p class="text-sm">
-              <span>3:50:51 pm</span> / <span>00:00:00:000</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Verify Beans</h5>
-<span class='badge badge-success'>02.03.2025 3:50:51 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:50:51 pm</span>
-<span class='badge badge-default'>00:00:00:000</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Verify application beans are loaded for LoginTest</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:50:51 pm</td>
-        <td>
-          Beans are loaded successfully
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="18"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Verify login with invalid email</p>
-            <p class="text-sm">
-              <span>3:50:53 pm</span> / <span>00:00:17:646</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Verify login with invalid email</h5>
-<span class='badge badge-success'>02.03.2025 3:50:53 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:51:10 pm</span>
-<span class='badge badge-default'>00:00:17:646</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Login form should not go to password page</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:50:54 pm</td>
-        <td>
-          Navigating to Login Page: https://qa.bitdelta.com/en/login
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:51:04 pm</td>
-        <td>
-          Accepted TnC
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:51:10 pm</td>
-        <td>
-          Navigated to the login page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:51:10 pm</td>
-        <td>
-          Test for login with empty form
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:51:10 pm</td>
-        <td>
-          Invalid email validation passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="19"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Verify login with empty email</p>
-            <p class="text-sm">
-              <span>3:51:11 pm</span> / <span>00:00:22:835</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Verify login with empty email</h5>
-<span class='badge badge-success'>02.03.2025 3:51:11 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:51:34 pm</span>
-<span class='badge badge-default'>00:00:22:835</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Login form should not go to password page</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:51:12 pm</td>
-        <td>
-          Navigating to Login Page: https://qa.bitdelta.com/en/login
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:51:23 pm</td>
-        <td>
-          Accepted TnC
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:51:28 pm</td>
-        <td>
-          Navigated to the login page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:51:28 pm</td>
-        <td>
-          Test for login with empty form
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:51:34 pm</td>
-        <td>
-          Empty email validation passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="20"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Verify login with non-existing user</p>
-            <p class="text-sm">
-              <span>3:51:36 pm</span> / <span>00:00:28:654</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Verify login with non-existing user</h5>
-<span class='badge badge-success'>02.03.2025 3:51:36 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:52:04 pm</span>
-<span class='badge badge-default'>00:00:28:654</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Login form should not go to password page</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:51:37 pm</td>
-        <td>
-          Navigating to Login Page: https://qa.bitdelta.com/en/login
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:51:47 pm</td>
-        <td>
-          Accepted TnC
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:51:53 pm</td>
-        <td>
-          Navigated to the login page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:51:53 pm</td>
-        <td>
-          Test for login with non-existing email
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:52:04 pm</td>
-        <td>
-          Empty email validation passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="21"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Verify login with valid email but invalid password</p>
-            <p class="text-sm">
-              <span>3:52:05 pm</span> / <span>00:01:28:255</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Verify login with valid email but invalid password</h5>
-<span class='badge badge-success'>02.03.2025 3:52:05 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:53:33 pm</span>
-<span class='badge badge-default'>00:01:28:255</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">Login form should not submit</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:52:07 pm</td>
-        <td>
-          Navigating to Login Page: https://qa.bitdelta.com/en/login
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:52:17 pm</td>
-        <td>
-          Accepted TnC
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:52:23 pm</td>
-        <td>
-          Navigated to the login page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:52:23 pm</td>
-        <td>
-          Test for login with invalid password
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:53:33 pm</td>
-        <td>
-          Empty email validation passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="fail" test-id="22"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Verify login with valid email and password</p>
-            <p class="text-sm">
-              <span>3:53:35 pm</span> / <span>00:05:49:913</span>
+              <span>9:59:17 am</span> / <span>00:01:02:263</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -1399,69 +89,383 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Verify login with valid email and password</h5>
-<span class='badge badge-success'>02.03.2025 3:53:35 pm</span>
-<span class='badge badge-danger'>02.03.2025 3:59:25 pm</span>
-<span class='badge badge-default'>00:05:49:913</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+<h5 class="test-status text-fail">Verify Home Page Footer Links</h5>
+<span class='badge badge-success'>02.06.2025 9:59:17 am</span>
+<span class='badge badge-danger'>02.06.2025 10:00:19 am</span>
+<span class='badge badge-default'>00:01:02:263</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-10 m-l-5">Login form should submit</div>
+<div class="m-t-10 m-l-5">Check the footer links for validity and responsiveness.</div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-    
-
-<img data-featherlight='report/screenshots/testLogin.png' src="report/screenshots/testLogin.png">
-  
-    
-
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:53:37 pm</td>
+        <td>9:59:19 am</td>
         <td>
-          Navigating to Login Page: https://qa.bitdelta.com/en/login
+          Navigating to Home Page: https://bitdelta.com/en
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:53:48 pm</td>
+        <td>9:59:29 am</td>
         <td>
-          Accepted TnC
+          Accepted Terms and Conditions popup.
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:53:53 pm</td>
+        <td>9:59:29 am</td>
         <td>
-          Navigated to the login page
+          Enabled dark theme.
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:53:53 pm</td>
+        <td>9:59:29 am</td>
         <td>
-          Test for login with valid email and password
+          Starting footer links verification.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:59:29 am</td>
+        <td>
+          Total footer links found: 46
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>9:59:29 am</td>
+        <td>
+          SKIPPED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:59:30 am</td>
+        <td>
+          PASSED
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>3:59:25 pm</td>
+        <td>9:59:49 am</td>
         <td>
-          Test failed due to an exception: Element not visible: By.xpath: //div/p[text()='Wallet'] | //h2[text()='Individual Questionnaire'] | //h1[text()='Please provide the information'] | //p[text()='Complete identity verification to unlock all features. ']
+          FAILED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:59:50 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:59:51 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:59:52 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:59:53 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:59:55 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:59:55 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:59:56 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:59:57 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:59:58 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:59:59 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:00 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:01 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:02 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:03 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:03 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:04 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:05 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:06 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:07 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:07 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:08 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:09 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:10 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:11 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:00:11 am</td>
+        <td>
+          FAILED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:00:12 am</td>
+        <td>
+          FAILED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:12 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:14 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:15 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:15 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:16 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:17 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:00:17 am</td>
+        <td>
+          SKIPPED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:00:17 am</td>
+        <td>
+          SKIPPED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:00:17 am</td>
+        <td>
+          SKIPPED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:00:17 am</td>
+        <td>
+          SKIPPED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:00:17 am</td>
+        <td>
+          SKIPPED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:00:17 am</td>
+        <td>
+          SKIPPED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:00:17 am</td>
+        <td>
+          SKIPPED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:00:17 am</td>
+        <td>
+          SKIPPED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:18 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:18 am</td>
+        <td>
+          PASSED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:00:19 am</td>
+        <td>
+          PASSED
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:59:25 pm</td>
+        <td>10:00:19 am</td>
         <td>
-          Driver quit successfully
+          Driver quit successfully.
         </td>
       </tr>
   </tbody>
@@ -1483,19 +487,19 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Feb 3, 2025 03:38:25 pm</h3>
+<h3>Feb 6, 2025 09:59:17 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Feb 3, 2025 03:59:25 pm</h3>
+<h3>Feb 6, 2025 10:00:19 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>21</h3>
+<h3>0</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -1517,12 +521,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='95%'>
-<b>21</b> tests passed
+<div><small data-tooltip='0%'>
+<b>0</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='4%'><b>1</b> tests failed,
+<small data-tooltip='100%'><b>1</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -1540,10 +544,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='18%'><b>16</b> events passed</small></div>
+<div><small data-tooltip='65%'><b>34</b> events passed</small></div>
 <div>
-<small data-tooltip='1%'><b>1</b> events failed,
-<b data-tooltip='%'>71</b> others
+<small data-tooltip='5%'><b>3</b> events failed,
+<b data-tooltip='%'>15</b> others
 </small>
 </div>
 </div>
@@ -1559,7 +563,7 @@
 </div></div>
 <script>
 var timeline = {
-"Verify Beans":0.001,"Verify signup with empty form":29.313,"Sign-Up with Invalid Email":22.429,"Sign-Up with Existing Email":18.51,"Sign-Up with Valid Email and Password":73.75,"Signup with different country other than India":17.255,"Signup using referral code":17.372,"Password Test: Should contain at least one special character":23.524,"Password Test: Should contain at least one lowercase letter":21.96,"Password Test: Should contain at least one uppercase letter":23.747,"Password Test: Should contain at least one number":24.642,"Password Test: Should not contain any spaces":23.844,"Password Test: Should not contain more than 17 characters":22.996,"Password Test: Should not accept values with <script>":23.847,"Test signup with corporate user":18.158,"Test signup with corporate user":174.428,"Verify Beans":0,"Verify login with invalid email":17.646,"Verify login with empty email":22.835,"Verify login with non-existing user":28.654,"Verify login with valid email but invalid password":88.255,"Verify login with valid email and password":349.913
+"Verify Home Page Footer Links":62.263
 };
 </script>
 <div class="row">
@@ -1590,7 +594,7 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 21,
+passParent: 0,
 failParent: 1,
 warningParent: 0,
 skipParent: 0,
@@ -1607,11 +611,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 16,
-failEvents: 1,
-warningEvents: 0,
+passEvents: 34,
+failEvents: 3,
+warningEvents: 9,
 skipEvents: 0,
-infoEvents: 71
+infoEvents: 6
 };
 </script>        </div>
       </div>

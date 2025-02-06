@@ -40,14 +40,15 @@
 
     <test name="All Tests">
         <classes>
-            <class name="com.example.automation.tests.testcases.SignUpTest" />
+<!--            <class name="com.example.automation.tests.testcases.SignUpTest" />-->
+            <class name="com.example.automation.tests.testcases.HomePageFooterLinksTest" />
 
-            <class name="com.example.automation.tests.testcases.LoginTest" />
+<!--            <class name="com.example.automation.tests.testcases.LoginTest" />-->
 
 <!--                                   Sign Up Tests    -->
 <!--            <class name="com.example.automation.tests.testcases.SignUpTest" >-->
 <!--                <methods>-->
-<!--                    <include name="testSignUpWithCorporateUserWithDifferentCountry"/>-->
+<!--                    <include name="testSignUpWithCorporateUser"/>-->
 <!--                </methods>-->
 <!--            </class>-->
 

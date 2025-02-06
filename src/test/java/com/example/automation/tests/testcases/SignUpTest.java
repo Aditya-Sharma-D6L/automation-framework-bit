@@ -37,7 +37,7 @@ public class SignUpTest extends AbstractTestNGSpringContextTests {
     private String baseUrl;
     private ExtentTest test;
 
-    private void initializeDriverAndSignupPage(String testName, String description) throws Exception {
+    private void initializeDriver(String testName, String description) throws Exception {
         driverManager.initializeDriver();
         driver = driverManager.getDriver();
         signupPage = new SignupPage(driver);
@@ -76,7 +76,7 @@ public class SignUpTest extends AbstractTestNGSpringContextTests {
 
     @Test(priority = 1, description = "Verify that the signup form doesnt submit with empty email and password fields")
     public void testWithEmptyEmailAndPassword() throws Exception {
-        initializeDriverAndSignupPage("Verify signup with empty form", "Sign-Up form should not submit with empty form");
+        initializeDriver("Verify signup with empty form", "Sign-Up form should not submit with empty form");
         test.info("Test for signup with empty form");
 
         try {
@@ -99,7 +99,7 @@ public class SignUpTest extends AbstractTestNGSpringContextTests {
 
     @Test(priority = 2, groups = {"regression", "sanity"}, description = "Registration with invalid email 'abcd.com'")
     public void testSignUpWithInvalidEmail() throws Exception {
-        initializeDriverAndSignupPage("Sign-Up with Invalid Email", "Test for invalid email format validation");
+        initializeDriver("Sign-Up with Invalid Email", "Test for invalid email format validation");
 
         try {
             signupPage.enterEmail("abcd.com").enterPassword("Pass@12345").clickSignUpButton("abcd.com", "Pass@12345");
@@ -115,7 +115,7 @@ public class SignUpTest extends AbstractTestNGSpringContextTests {
 
     @Test(priority = 3, groups = {"regression"}, description = "Verify sign-up functionality with existing email")
     public void testSignUpWithExistingEmail() throws Exception {
-        initializeDriverAndSignupPage("Sign-Up with Existing Email", "Test for existing email validation");
+        initializeDriver("Sign-Up with Existing Email", "Test for existing email validation");
 
         try {
             String existingEmail = EnvironmentUtils.getEmailForEnvironment();
@@ -138,7 +138,7 @@ public class SignUpTest extends AbstractTestNGSpringContextTests {
 
     @Test(priority = 4, groups = {"regression", "smoke"}, description = "Test for successful sign-up with valid(unique) email and password")
     public void testSignUpWithValidEmailAndPassword() throws Exception {
-        initializeDriverAndSignupPage("Sign-Up with Valid Email and Password", "Test for successful sign-up");
+        initializeDriver("Sign-Up with Valid Email and Password", "Test for successful sign-up");
         test.info("Test for successful sign-up with valid(unique) email and password");
 
         try {
@@ -160,7 +160,7 @@ public class SignUpTest extends AbstractTestNGSpringContextTests {
 
     @Test(priority = 5, groups = {"regression"}, description = "Verify registration other than India as a country")
     public void testSignUpWithDifferentCountry() throws Exception {
-        initializeDriverAndSignupPage("Signup with different country other than India", "Test for different country during signup");
+        initializeDriver("Signup with different country other than India", "Test for different country during signup");
 
         // Fill out the signup form and submit
         String country = "Poland";
@@ -186,7 +186,7 @@ public class SignUpTest extends AbstractTestNGSpringContextTests {
 
     @Test(priority = 6, groups = {"regression", "sanity"}, description = "Verify registration with referral code")
     public void testSignUpWithReferralCode() throws Exception {
-        initializeDriverAndSignupPage("Signup using referral code", "Test signup using a referral code");
+        initializeDriver("Signup using referral code", "Test signup using a referral code");
 
         // Fill out the signup form and submit
         String referralCode = "r5fya3_R";
@@ -217,7 +217,7 @@ public class SignUpTest extends AbstractTestNGSpringContextTests {
             dataProvider = "passwordValidationDataProvider",
             dataProviderClass = PasswordValidationData.class)
     public void testDynamicPasswordValidationRules(String password, String expectedMessage) throws Exception {
-        initializeDriverAndSignupPage("Password Test: " + expectedMessage, "Test various password validation rules");
+        initializeDriver("Password Test: " + expectedMessage, "Test various password validation rules");
 
         try {
             String email = generateEmail.generateEmail();
@@ -236,7 +236,7 @@ public class SignUpTest extends AbstractTestNGSpringContextTests {
 
     @Test(priority = 8, description = "Verify corporate user registration")
     public void testSignUpWithCorporateUser() throws Exception {
-        initializeDriverAndSignupPage("Test signup with corporate user", "Verify corporate user registration");
+        initializeDriver("Test signup with corporate user", "Verify corporate user registration");
 
         try {
             String email = generateEmail.generateEmail();
@@ -256,7 +256,7 @@ public class SignUpTest extends AbstractTestNGSpringContextTests {
 
     @Test(priority = 9, description = "Verify corporate user registration")
     public void testSignUpWithCorporateUserWithDifferentCountry() throws Exception {
-        initializeDriverAndSignupPage("Test signup with corporate user", "Verify corporate user registration");
+        initializeDriver("Test signup with corporate user", "Verify corporate user registration");
 
         try {
             String email = generateEmail.generateEmail();

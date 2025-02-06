@@ -1,13 +1,10 @@
 package com.example.automation.pages;
 
-import com.example.automation.config.ApplicationProperties;
-import com.example.automation.drivers.DriverManager;
 import com.example.automation.utilities.Retry;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.*;
 import com.example.automation.utilities.WaitUtils;
 import com.example.automation.utilities.ElementUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 
 @Slf4j
 public abstract class BasePage {

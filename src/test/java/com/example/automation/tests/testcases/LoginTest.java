@@ -38,7 +38,7 @@ public class LoginTest extends AbstractTestNGSpringContextTests {
     private String baseUrl;
     private ExtentTest test;
 
-    private void initializeDriverAndLoginPage(String testName, String description) throws Exception {
+    private void initializeDriver(String testName, String description) throws Exception {
         driverManager.initializeDriver();
         driver = driverManager.getDriver();
         loginPage = new LoginPage(driver, 10);
@@ -77,7 +77,7 @@ public class LoginTest extends AbstractTestNGSpringContextTests {
 
     @Test(priority = 1, description = "Verify login with invalid email")
     public void testLoginWithInvalidEmail() throws Exception {
-        initializeDriverAndLoginPage("Verify login with invalid email", "Login form should not go to password page");
+        initializeDriver("Verify login with invalid email", "Login form should not go to password page");
         test.info("Test for login with empty form");
 
         try {
@@ -98,7 +98,7 @@ public class LoginTest extends AbstractTestNGSpringContextTests {
 
     @Test(priority = 2, description = "Verify login with empty email")
     public void testLoginWithEmptyEmail() throws Exception {
-        initializeDriverAndLoginPage("Verify login with empty email", "Login form should not go to password page");
+        initializeDriver("Verify login with empty email", "Login form should not go to password page");
         test.info("Test for login with empty form");
 
         try {
@@ -123,7 +123,7 @@ public class LoginTest extends AbstractTestNGSpringContextTests {
 
     @Test(priority = 3, description = "Verify login with non-existing user")
     public void testLoginWithNonExistingEmail() throws Exception {
-        initializeDriverAndLoginPage("Verify login with non-existing user", "Login form should not go to password page");
+        initializeDriver("Verify login with non-existing user", "Login form should not go to password page");
 
         test.info("Test for login with non-existing email");
 
@@ -149,7 +149,7 @@ public class LoginTest extends AbstractTestNGSpringContextTests {
 
     @Test(priority = 4, description = "Verify login with valid email but invalid password")
     public void testLoginWithInvalidPassword() throws Exception {
-        initializeDriverAndLoginPage("Verify login with valid email but invalid password", "Login form should not submit");
+        initializeDriver("Verify login with valid email but invalid password", "Login form should not submit");
 
         test.info("Test for login with invalid password");
 
@@ -174,7 +174,7 @@ public class LoginTest extends AbstractTestNGSpringContextTests {
             dataProviderClass = UserCredentials.class,
             dataProvider = "userCredentials")
     public void testLogin(String env, String email, String password) throws Exception {
-        initializeDriverAndLoginPage("Verify login with valid email and password", "Login form should submit");
+        initializeDriver("Verify login with valid email and password", "Login form should submit");
 
         test.info("Test for login with valid email and password");
 
