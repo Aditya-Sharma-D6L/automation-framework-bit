@@ -80,7 +80,7 @@ public class Config {
             // If the properties file is environment-specific, populate BASE_URLS
             if (fileName.contains("application-")) {
                 String env = fileName.substring(fileName.lastIndexOf('-') + 1, fileName.indexOf(".properties"));
-                String baseUrl = properties.getProperty("app.baseUrl");
+                String baseUrl = properties.getProperty("baseUrl");
                 System.out.println("Loaded base URL for " + env + ": " + baseUrl);  // Log the loaded base URL
                 if (baseUrl == null) {
                     throw new RuntimeException("Base URL not found for environment: " + env);
