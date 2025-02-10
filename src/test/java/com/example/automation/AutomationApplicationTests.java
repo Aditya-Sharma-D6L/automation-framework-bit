@@ -1,9 +1,9 @@
 package com.example.automation;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.testng.annotations.Test;
 
-@SpringBootTest
+@SpringBootTest(classes = AutomationApplication.class)
 class AutomationApplicationTests {
 
 	@Test
