@@ -16,9 +16,13 @@ public class ExtentReportManager {
      */
     public static ExtentReports getExtentReports() {
         if (extent == null) {
-            ExtentSparkReporter sparkReporter = new ExtentSparkReporter("report/ExtentReport.html");
+            String reportPath = System.getProperty("user.dir") + "/test-output/ExtentReport.html";
+            ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
             sparkReporter.config().setReportName("Automation Test Report");
             sparkReporter.config().setDocumentTitle("Test Execution Report");
+
+            // ✅ Enable offline mode to avoid 404 issues
+            sparkReporter.config().setOfflineMode(true);
 
             extent = new ExtentReports();
             extent.attachReporter(sparkReporter);
@@ -43,6 +47,7 @@ public class ExtentReportManager {
     public static void flushReports() {
         if (extent != null) {
             extent.flush();
+            System.out.println("✅ Extent Report flushed successfully at: test-output/ExtentReport.html");
         }
     }
 }

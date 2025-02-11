@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 public class UserCredentials {
 
-    @DataProvider(name = "userCredentials")
+    @DataProvider(name = "userCredentials", parallel = true)
     public static Object[][] userCredentialsDataProvider() {
         // All environment-specific credentials
         Object[][] allCredentials = {

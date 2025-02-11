@@ -2,7 +2,6 @@ package com.example.automation.tests.testcases;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.example.automation.config.ApplicationProperties;
-import com.example.automation.config.Config;
 import com.example.automation.drivers.DriverManager;
 import com.example.automation.pages.LoginPage;
 import com.example.automation.tests.testdata.UserCredentials;
