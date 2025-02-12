@@ -287,11 +287,6 @@ public class SignupPage extends BasePage {
      */
     public void corpSignUp(String email, String password) throws Exception {
         selectCorporateUser();
-        enterEmail(email);
-        enterPassword(password);
-        showPassword();
-        clickSignUpButton(email, password);
-        acceptTnc();
-        solveCaptcha();
+        signUp(email, password);
     }
 }

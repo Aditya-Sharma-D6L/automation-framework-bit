@@ -4,7 +4,7 @@ import org.testng.annotations.DataProvider;
 
 public class PasswordValidationData {
 
-    @DataProvider(name = "passwordValidationDataProvider", parallel = true)
+    @DataProvider(name = "passwordValidationDataProvider")
     public static Object[][] passwordValidationDataProvider() {
         return new Object[][]{
                 {"Pass12345", "Should contain at least one special character"},

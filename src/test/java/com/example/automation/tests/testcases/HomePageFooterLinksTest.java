@@ -91,13 +91,4 @@ public class HomePageFooterLinksTest extends BaseTest {
             throw e;
         }
     }
-
-    /**
-     * Retrieves the name of the currently executing method.
-     *
-     * @return The method name as a string.
-     */
-    private String getMethodName() {
-        return Thread.currentThread().getStackTrace()[2].getMethodName();
-    }
 }

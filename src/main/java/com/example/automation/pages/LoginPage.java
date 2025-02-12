@@ -28,7 +28,7 @@ public class LoginPage extends BasePage {
      * Constructor for Login Page.
      * @param driver The WebDriver instance.
      */
-    public LoginPage(WebDriver driver, int timeoutInSeconds) {
+    public LoginPage(WebDriver driver) {
         super(driver);
         this.captcha = new Captcha(driver, waitUtils);
         this.handleOtp_2fa = new HandleOtpOR2faVerification(driver, waitUtils);

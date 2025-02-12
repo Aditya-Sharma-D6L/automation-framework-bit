@@ -3,17 +3,14 @@ package com.example.automation.tests.testcases;
 import com.aventstack.extentreports.ExtentTest;
 import com.example.automation.config.ApplicationProperties;
 import com.example.automation.drivers.DriverManager;
-import com.example.automation.pages.HomePage;
 import com.example.automation.utilities.*;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
-import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.AfterSuite;
 
 @Slf4j
 public class BaseTest extends AbstractTestNGSpringContextTests {
@@ -65,16 +62,36 @@ public class BaseTest extends AbstractTestNGSpringContextTests {
         }, 2, 500, "Terms and Conditions Acceptance");
     }
 
-    @AfterMethod
-    protected void tearDown() {
-        if (driver != null) {
-            driverManager.quitDriver();  // ✅ Calls the thread-safe quit method from DriverManager
-            log.info("Driver quit successfully.");
-            test.info("Driver quit successfully.");
-        }
+    /**
+     * Captures failure details including a screenshot and logs.
+     *
+     * @param e Exception that occurred
+     */
+    protected void captureFailureDetails(Exception e) throws Exception {
+        test.fail("Test failed due to an exception: " + e.getMessage());
+        ScreenshotUtil.captureScreenshot(driver, test, getMethodName());
+        log.error("Test failed", e);
+        throw e;
+    }
 
-        // ✅ Flush Extent Reports after every test method
+    /**
+     * Retrieves the name of the currently executing method.
+     *
+     * @return The method name as a string.
+     */
+    protected String getMethodName() {
+        return Thread.currentThread().getStackTrace()[2].getMethodName();
+    }
+
+    /**
+     * Quits the current browser instance and flushes extent report after each class run
+     */
+    @AfterMethod(alwaysRun = true)
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+            test.info("Driver quit successfully");
+        }
         ExtentReportManager.flushReports();
-        log.info("Extent Reports flushed.");
     }
 }

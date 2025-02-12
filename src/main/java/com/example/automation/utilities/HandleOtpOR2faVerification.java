@@ -55,7 +55,14 @@ public class HandleOtpOR2faVerification {
      * @return boolean value
      */
     public boolean isOtpOr2FaPageDisplayed() {
-        return waitUtils.waitForVisibilityShort(opt_or_2fa_page).isDisplayed();
+        try {
+            return waitUtils.waitForVisibilityShort(opt_or_2fa_page).isDisplayed(); // Returns true if element is found
+        } catch (TimeoutException e) {
+            return false;  // Return false if the element is NOT found (normal case)
+        } catch (Exception e) {
+            log.error("Unexpected error while checking for OTP/2FA page visibility: {}", e.getMessage());
+            return false;  // Log other unexpected errors
+        }
     }
 
     /**

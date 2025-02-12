@@ -41,8 +41,8 @@
     <test name="All Tests">
 
         <classes>
-<!--                <class name="com.example.automation.tests.testcases.HomePageFooterLinksTest"/>-->
-<!--            <class name="com.example.automation.tests.testcases.SignUpTest" />-->
+                <class name="com.example.automation.tests.testcases.HomePageFooterLinksTest"/>
+            <class name="com.example.automation.tests.testcases.SignUpTest" />
             <class name="com.example.automation.tests.testcases.LoginTest" />
 
 <!--                                   Sign Up Tests    -->
