@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="All Sign Up Tests" verbose="1">
+<suite name="All Tests" verbose="1">
 
 <!--    &lt;!&ndash; Smoke Test Suite &ndash;&gt;-->
 <!--    <test name="Smoke Tests">-->
@@ -47,17 +47,21 @@
 
 <!--                                   Sign Up Tests    -->
 <!--            <class name="com.example.automation.tests.testcases.SignUpTest" >-->
-<!--                <methods>-->
-<!--                    <include name="testSignUpWithCorporateUser"/>-->
-<!--                </methods>-->
+<!--&lt;!&ndash;                <methods>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <include name="testSignUpWithCorporateUser"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                </methods>&ndash;&gt;-->
 <!--            </class>-->
 
-                                <!--   Login Tests    -->
+<!--                                &lt;!&ndash;   Login Tests    &ndash;&gt;-->
 <!--            <class name="com.example.automation.tests.testcases.LoginTest">-->
-<!--                <methods>-->
-<!--                    <include name="testLoginWithInvalidPassword"/>-->
-<!--                </methods>-->
+<!--&lt;!&ndash;                <methods>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <include name="testLoginWithNonExistingEmail"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                </methods>&ndash;&gt;-->
 <!--            </class>-->
+
+                                <!--   Homepage Tests    -->
+<!--            <class name="com.example.automation.tests.testcases.HomePageFooterLinksTest" />-->
+
         </classes>
     </test>
 </suite>

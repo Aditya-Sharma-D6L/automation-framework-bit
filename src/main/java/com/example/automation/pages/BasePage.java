@@ -5,6 +5,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.*;
 import com.example.automation.utilities.WaitUtils;
 import com.example.automation.utilities.ElementUtils;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 
 @Slf4j
 public abstract class BasePage {
@@ -14,6 +16,9 @@ public abstract class BasePage {
     protected ElementUtils elementUtils;
     protected int longWait = 10;
     protected int shortWait = 5;
+
+    @FindBy(how = How.XPATH, using = "//div[@class='navigation-bar-item-root flex-shrink-0 css-fv3lde']")
+    private WebElement userProfileIcon;
 
     /**
      * Constructor for BasePage.
@@ -96,4 +101,12 @@ public abstract class BasePage {
             throw new RuntimeException("Failed to send keys to element: " + locator, e);
         }
     }
+
+//    public void logOut() {
+//        try {
+//
+//        } catch (Exception e) {
+//
+//        }
+//    }
 }
