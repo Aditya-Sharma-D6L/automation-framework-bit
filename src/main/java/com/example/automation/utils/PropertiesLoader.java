@@ -1,4 +1,4 @@
-package com.example.automation.utilities;
+package com.example.automation.utils;
 
 import java.io.IOException;
 import java.io.InputStream;

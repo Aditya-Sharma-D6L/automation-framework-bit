@@ -1,6 +1,6 @@
 package com.example.automation.pages;
 
-import com.example.automation.utilities.*;
+import com.example.automation.utils.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

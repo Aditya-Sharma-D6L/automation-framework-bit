@@ -1,4 +1,4 @@
-package com.example.automation.utilities;
+package com.example.automation.utils;
 
 import com.example.automation.config.Config;
 import org.springframework.stereotype.Component;

@@ -1,5 +1,6 @@
-package com.example.automation.utilities;
+package com.example.automation.utils;
 
+import com.example.automation.config.Config;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
@@ -70,13 +71,12 @@ public class HandleOtpOR2faVerification {
      */
     public void handleOtp() {
         try {
-            // Use longWait for visibility checks since the page load may take time
+            // Check if the OTP page or 2FA page is displayed
             try {
                 if (isOtpPageDisplayed()) {
                     log.info("On OTP page");
                 }
             } catch (Exception e) {
-                // OTP page not found, try checking for 2FA
                 try {
                     if (is2FaPageDisplayed()) {
                         log.info("On 2FA page");
@@ -87,12 +87,23 @@ public class HandleOtpOR2faVerification {
                 }
             }
 
-            // Enter the OTP or 2FA when the page is displayed
-            String sampleOtp = "123456";
-            for (int i = 0; i < sampleOtp.length(); i++) {
+            // Determine OTP based on environment
+            String otp;
+            String activeProfile = System.getProperty("spring.profiles.active");
+            if (activeProfile.equals("prod")) {
+                log.info("Running in PROD environment - Generating OTP using OTPUtil.");
+                String username = "copt1@yopmail.com"; // Replace with dynamic user retrieval if needed
+                otp = OTPUtil.generateTOTPForUser(username);
+            } else {
+                log.info("Non-PROD environment detected, using sample OTP.");
+                otp = "123456"; // Use dummy OTP for non-prod environments
+            }
+
+            // Enter the OTP or 2FA code
+            for (int i = 0; i < otp.length(); i++) {
                 WebElement pinInputField = waitUtils.waitForVisibilityShort(By.xpath("//input[@data-index='" + i + "']"));
-                Thread.sleep(100);
-                pinInputField.sendKeys(String.valueOf(sampleOtp.charAt(i)));
+                pinInputField.sendKeys(String.valueOf(otp.charAt(i)));
+                waitForSeconds(1);
             }
 
             // Click the "Verify" button and validate the verification result
@@ -109,6 +120,10 @@ public class HandleOtpOR2faVerification {
             Thread.currentThread().interrupt();
             log.error("Thread was interrupted: {}", e.getMessage());
         }
+    }
+
+    public void waitForSeconds(int timeInSeconds) throws InterruptedException {
+        Thread.sleep(timeInSeconds * 1000L);
     }
 
     /**

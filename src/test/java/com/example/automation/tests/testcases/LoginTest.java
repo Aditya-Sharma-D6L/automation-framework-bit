@@ -3,7 +3,7 @@ package com.example.automation.tests.testcases;
 import com.example.automation.pages.LoginPage;
 import com.example.automation.tests.testdata.UserCredentials;
 import com.example.automation.tests.utilities.EnvironmentUtils;
-import com.example.automation.utilities.*;
+import com.example.automation.utils.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -119,6 +119,13 @@ public class LoginTest extends BaseTest {
 
         try {
             loginPage.login(email, password);
+
+//            if (env.equals("prod")) {
+//                generateTOTPForUser(email);
+//            } else {
+//                loginPage.enterOtpOr2Fa();
+//            }
+
             loginPage.enterOtpOr2Fa();
 
             Assert.assertTrue(loginPage.isLoginSuccessful(), "Login Failed. Something went wrong");

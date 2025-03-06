@@ -1,4 +1,4 @@
-package com.example.automation.utilities;
+package com.example.automation.utils;
 
 import com.aventstack.extentreports.ExtentTest;
 import lombok.extern.slf4j.Slf4j;

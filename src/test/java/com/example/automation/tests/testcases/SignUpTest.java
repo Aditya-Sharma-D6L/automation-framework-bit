@@ -3,7 +3,7 @@ package com.example.automation.tests.testcases;
 import com.example.automation.pages.SignupPage;
 import com.example.automation.tests.testdata.PasswordValidationData;
 import com.example.automation.tests.utilities.EnvironmentUtils;
-import com.example.automation.utilities.*;
+import com.example.automation.utils.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

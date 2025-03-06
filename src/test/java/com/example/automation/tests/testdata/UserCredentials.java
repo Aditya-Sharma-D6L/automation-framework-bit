@@ -14,7 +14,8 @@ public class UserCredentials {
                 {"qa", "copt1@yopmail.com", "Pass@123456"},
                 {"staging", "mtaditya2@yopmail.com", "Pass@12345"},
                 {"eks", "mtaditya2@yopmail.com", "Pass@12345"},
-                {"prod", "aditya.sharma@delta6labs.com", "Pass@12345"}
+//                {"prod", "aditya.sharma@delta6labs.com", "Pass@12345"},
+                {"prod", "copt1@yopmail.com", "Pass@12345"}
         };
 
         // Get the current environment from the configuration

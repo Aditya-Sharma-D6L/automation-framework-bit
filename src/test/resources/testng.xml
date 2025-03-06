@@ -41,9 +41,9 @@
     <test name="All Tests">
 
         <classes>
-                <class name="com.example.automation.tests.testcases.HomePageFooterLinksTest"/>
-            <class name="com.example.automation.tests.testcases.SignUpTest" />
-            <class name="com.example.automation.tests.testcases.LoginTest" />
+<!--                <class name="com.example.automation.tests.testcases.HomePageFooterLinksTest"/>-->
+<!--            <class name="com.example.automation.tests.testcases.SignUpTest" />-->
+<!--            <class name="com.example.automation.tests.testcases.LoginTest" />-->
 
 <!--                                   Sign Up Tests    -->
 <!--            <class name="com.example.automation.tests.testcases.SignUpTest" >-->
@@ -53,11 +53,11 @@
 <!--            </class>-->
 
 <!--                                &lt;!&ndash;   Login Tests    &ndash;&gt;-->
-<!--            <class name="com.example.automation.tests.testcases.LoginTest">-->
-<!--&lt;!&ndash;                <methods>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <include name="testLoginWithNonExistingEmail"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                </methods>&ndash;&gt;-->
-<!--            </class>-->
+            <class name="com.example.automation.tests.testcases.LoginTest">
+                <methods>
+                    <include name="testLogin"/>
+                </methods>
+            </class>
 
                                 <!--   Homepage Tests    -->
 <!--            <class name="com.example.automation.tests.testcases.HomePageFooterLinksTest" />-->

@@ -1,4 +1,4 @@
-package com.example.automation.utilities;
+package com.example.automation.utils;
 
 import lombok.Getter;
 import org.openqa.selenium.*;

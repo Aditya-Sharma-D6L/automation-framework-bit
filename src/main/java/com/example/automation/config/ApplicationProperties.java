@@ -10,5 +10,6 @@ import org.springframework.context.annotation.Configuration;
 public class ApplicationProperties {
     private String browser;
     private String baseUrl;
+    private boolean headless;
     private int defaultWaitTimeout;
 }

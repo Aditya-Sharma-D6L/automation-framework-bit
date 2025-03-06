@@ -1,4 +1,4 @@
-package com.example.automation.utilities;
+package com.example.automation.utils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.*;
@@ -51,7 +51,7 @@ public class Captcha {
                         .perform();
 
                 // Wait for a brief period to allow captcha validation
-                Thread.sleep(1500);
+//                Thread.sleep(1500);
 
                 // Check if captcha is solved
                 if (isCaptchaSolved()) {

@@ -1,9 +1,11 @@
-package com.example.automation.utilities;
+package com.example.automation.utils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import java.time.Duration;
 
 @Slf4j
 public class TermsAndConditionsModal {
@@ -29,7 +31,7 @@ public class TermsAndConditionsModal {
      */
     public TermsAndConditionsModal(WebDriver driver, WaitUtils waitUtils) {
         this.driver = driver;
-        this.waitUtils = waitUtils;
+        this.waitUtils = new WaitUtils(driver, 10, 3);
     }
 
     /**
@@ -79,6 +81,7 @@ public class TermsAndConditionsModal {
             }
 
         } catch (Exception e) {
+            System.out.println(e.getMessage());
             log.error("Failed to accept Terms and Conditions popup.");
         }
     }

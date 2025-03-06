@@ -3,7 +3,7 @@ package com.example.automation.tests.testcases;
 import com.example.automation.config.ApplicationProperties;
 import com.example.automation.drivers.DriverManager;
 import com.example.automation.pages.HomePage;
-import com.example.automation.utilities.ScreenshotUtil;
+import com.example.automation.utils.ScreenshotUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebElement;
 import org.springframework.beans.factory.annotation.Autowired;

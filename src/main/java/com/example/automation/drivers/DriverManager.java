@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Collections;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Component
@@ -41,6 +42,12 @@ public class DriverManager {
         if (driverThreadLocal.get() != null) {
             log.warn("WebDriver is already initialized for this thread. Reinitializing...");
             quitDriver(); // Ensure the existing driver is cleaned up
+        }
+
+        if (isHeadless()) {
+            log.info("Execution is running in HEADLESS mode.");
+        } else {
+            log.info("Execution is running in NORMAL mode (headed).");
         }
 
         String browser = appProps.getBrowser().toLowerCase();
@@ -100,6 +107,10 @@ public class DriverManager {
         return waitThreadLocal.get();
     }
 
+    private boolean isHeadless() {
+        return appProps.isHeadless();
+    }
+
     /**
      * Initializes ChromeDriver.
      */
@@ -107,6 +118,16 @@ public class DriverManager {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-notifications");
+        options.addArguments("disable-infobars");
+        options.addArguments("--incognito");
+//        options.addArguments("disable-popup-blocking");
+        options.setExperimentalOption("excludeSwitches",
+                Collections.singletonList("enable-automation"));
+
+        if (isHeadless()) { // Use the updated isHeadless() method
+            options.addArguments("--headless=new"); // More stable headless mode
+        }
+
         return new ChromeDriver(options);
     }
 
@@ -117,6 +138,13 @@ public class DriverManager {
         WebDriverManager.firefoxdriver().setup();
         FirefoxOptions options = new FirefoxOptions();
         options.addArguments("--disable-notifications");
+        options.addArguments("disable-infobars");
+        options.addArguments("--incognito");
+//        options.addArguments("disable-popup-blocking");
+        if (isHeadless()) { // Use the updated isHeadless() method
+            options.addArguments("--headless"); // More stable headless mode
+        }
+
         return new FirefoxDriver(options);
     }
 
@@ -127,6 +155,16 @@ public class DriverManager {
         WebDriverManager.edgedriver().setup();
         EdgeOptions options = new EdgeOptions();
         options.addArguments("--disable-notifications");
+        options.addArguments("disable-infobars");
+        options.addArguments("--incognito");
+//        options.addArguments("disable-popup-blocking");
+        options.setExperimentalOption("excludeSwitches",
+                Collections.singletonList("enable-automation"));
+
+        if (isHeadless()) { // Use the updated isHeadless() method
+            options.addArguments("--headless=new"); // More stable headless mode
+        }
+
         return new EdgeDriver(options);
     }
 
@@ -145,6 +183,16 @@ public class DriverManager {
         WebDriverManager.chromedriver().setup();
         ChromeOptions braveOptions = new ChromeOptions();
         braveOptions.addArguments("--disable-notifications");
+        braveOptions.addArguments("disable-infobars");
+        braveOptions.addArguments("--incognito");
+//        options.addArguments("disable-popup-blocking");
+        braveOptions.setExperimentalOption("excludeSwitches",
+                Collections.singletonList("enable-automation"));
+
+        if (isHeadless()) { // Use the updated isHeadless() method
+            braveOptions.addArguments("--headless=new"); // More stable headless mode
+        }
+
         braveOptions.setBinary(detectBravePath());
         return new ChromeDriver(braveOptions);
     }

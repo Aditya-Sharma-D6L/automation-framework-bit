@@ -2,7 +2,7 @@ package com.example.automation.pages;
 
 import com.example.automation.config.ApplicationProperties;
 import com.example.automation.drivers.DriverManager;
-import com.example.automation.utilities.*;
+import com.example.automation.utils.*;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

@@ -1,6 +1,6 @@
 package com.example.automation.config;
 
-import com.example.automation.utilities.PropertiesLoader;
+import com.example.automation.utils.PropertiesLoader;
 
 import java.io.IOException;
 import java.io.InputStream;

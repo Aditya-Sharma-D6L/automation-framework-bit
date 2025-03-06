@@ -1,10 +1,10 @@
 package com.example.automation.pages;
 
-import com.example.automation.utilities.Retry;
+import com.example.automation.utils.Retry;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.*;
-import com.example.automation.utilities.WaitUtils;
-import com.example.automation.utilities.ElementUtils;
+import com.example.automation.utils.WaitUtils;
+import com.example.automation.utils.ElementUtils;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 

@@ -98,6 +98,12 @@
 			<version>4.5.13</version> <!-- Use the latest version -->
 		</dependency>
 
+		<dependency>
+			<groupId>de.taimos</groupId>
+			<artifactId>totp</artifactId>
+			<version>1.0</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

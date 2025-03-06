@@ -2,10 +2,10 @@ package com.example.automation.pages;
 
 import com.example.automation.config.ApplicationProperties;
 import com.example.automation.drivers.DriverManager;
-import com.example.automation.utilities.Captcha;
-import com.example.automation.utilities.HandleOtpOR2faVerification;
-import com.example.automation.utilities.Retry;
-import com.example.automation.utilities.TermsAndConditionsModal;
+import com.example.automation.utils.Captcha;
+import com.example.automation.utils.HandleOtpOR2faVerification;
+import com.example.automation.utils.Retry;
+import com.example.automation.utils.TermsAndConditionsModal;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
